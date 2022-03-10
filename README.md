@@ -1,1 +1,1 @@
-# LCEEQ Virtual Conference Monorepo
+# Grafana Hackathon - Go Git It
