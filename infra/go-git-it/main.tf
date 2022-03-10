@@ -2,7 +2,7 @@ terraform {
   backend "remote" {
     organization = "shiftfocus"
     workspaces {
-      name = "grafana-hackthon-2022"
+      name = "hackathon-go-git-it"
     }
   }
 }
