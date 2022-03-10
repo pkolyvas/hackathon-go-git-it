@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_80" {
-  name        = "allow_rdp"
+  name        = "allow_80"
   description = "Allow inbound RDP traffic"
   vpc_id      = module.vpc.vpc_id
   ingress {
@@ -23,7 +23,7 @@ resource "aws_security_group" "allow_80" {
 }
 
 resource "aws_security_group" "allow_443" {
-  name        = "allow_rdp"
+  name        = "allow_443"
   description = "Allow inbound RDP traffic"
   vpc_id      = module.vpc.vpc_id
   ingress {
@@ -47,7 +47,7 @@ resource "aws_security_group" "allow_443" {
 }
 
 resource "aws_security_group" "allow_22" {
-  name        = "allow_rdp"
+  name        = "allow_22"
   description = "Allow inbound RDP traffic"
   vpc_id      = module.vpc.vpc_id
   ingress {
@@ -66,6 +66,6 @@ resource "aws_security_group" "allow_22" {
   }
 
   tags = {
-    Name = "allow_443"
+    Name = "allow_22"
   }
 }
