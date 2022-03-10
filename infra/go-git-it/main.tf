@@ -52,5 +52,5 @@ output "ip" {
 }
 
 output "nameserver" {
-  value = data.aws_route53_zone.hackathon.name_servers
+  value = data.aws_route53_zone.hackathon_public.name_servers
 }
