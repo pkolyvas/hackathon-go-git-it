@@ -1,4 +1,4 @@
-resource "aws_instance" "windows" {
+resource "aws_instance" "hackathon_instance" {
 
   ami                         = "ami-045137e8d34668746"
   instance_type               = "t3a.small"
