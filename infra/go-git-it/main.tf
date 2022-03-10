@@ -47,5 +47,9 @@ output "private_subnets" {
   value = module.vpc.private_subnets
 }
 
+output "ip" {
+  value = aws_instance.hackathon_instance.public_ip
+}
+
 
 
