@@ -51,5 +51,6 @@ output "ip" {
   value = aws_instance.hackathon_instance.public_ip
 }
 
-
-
+output "nameserver" {
+  value = data.aws_route53_zone.hackathon.name_servers
+}
