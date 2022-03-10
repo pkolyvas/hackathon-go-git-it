@@ -34,7 +34,6 @@ resource "aws_key_pair" "grafana_hackathon" {
   key_name   = "grafana_hackathon_rsa"
   public_key = tls_private_key.private_key.public_key_openssh
 }
-
 output "vpc_id" {
   value = module.vpc.vpc_id
 }
@@ -52,5 +51,5 @@ output "ip" {
 }
 
 output "nameserver" {
-  value = data.aws_route53_zone.hackathon_public.name_servers
+  value = aws_route53_zone.hackathon_public.name_servers
 }
