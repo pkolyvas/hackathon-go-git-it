@@ -7,5 +7,5 @@ resource "aws_route53_record" "hackathon_80" {
   name    = "gogitit.online"
   type    = "A"
   ttl     = "30"
-  records = aws_instance.hackathon_instance.public_ip
+  records = [aws_instance.hackathon_instance.public_ip]
 }
