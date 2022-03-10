@@ -2,7 +2,7 @@ resource "aws_route53_zone" "hackathon_public" {
     name = "gogitit.online"
 }
 
-resource "aws_route53_record" "hackathon_80" {
+resource "aws_route53_record" "hackathon_instance" {
   zone_id = aws_route53_zone.hackathon_public.zone_id
   name    = "gogitit.online"
   type    = "A"
