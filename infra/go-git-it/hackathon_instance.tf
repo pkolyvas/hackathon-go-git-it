@@ -17,7 +17,7 @@ resource "aws_instance" "hackathon_instance" {
 }
 
 resource "aws_ebs_volume" "hackathon_data" {
-  availability_zone = "ca-central-1a"
+  availability_zone = "us-east-2a"
   size              = 32
   type = "gp2"
   tags = {
