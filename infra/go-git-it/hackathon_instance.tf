@@ -16,4 +16,16 @@ resource "aws_instance" "hackathon_instance" {
   }
 }
 
+resource "aws_ebs_volume" "hackathon_data" {
+  availability_zone = "ca-central-1a"
+  size              = 32
+  type = "gp2"
+  tags = {
+    Name = "Hackathon Data"
+  }
+}
 
+resource "aws_volume_attachment" "hackathon_data_attachement" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.hackathon_data.id
+  instance_id = aws_instance.hackathon_instance.id
