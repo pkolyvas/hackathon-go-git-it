@@ -29,3 +29,4 @@ resource "aws_volume_attachment" "hackathon_data_attachement" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.hackathon_data.id
   instance_id = aws_instance.hackathon_instance.id
+}
